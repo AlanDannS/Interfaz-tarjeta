@@ -3,6 +3,8 @@
     --color-white: #fff;
     --color-black: #000;
     --color-label: #7d8994;
+    --color-icon-form: #2364d2;
+    --color-icon-form-hover: #1850b1;
     --img-tarjet: url(../img/tarjeta/horizon-stars-endless-space.jpeg);
     --gradient-firma: linear-gradient(to right, #2c3e50, #bdc3c7);
     --fuente-firma: 'Indie Flower', cursive;
@@ -39,7 +41,6 @@ body {
     transition: .3s ease all;
     transform: rotateY(0deg);
     transform-style: preserve-3d;
-    backface-visibility: hidden;
     cursor: pointer;
     z-index: 2;
 }
@@ -109,6 +110,7 @@ body {
 /* Tar Tracera */
 
 .trasera {
+    width: 100%;
     background: var(--img-tarjet);
     background-size: cover;
     position: absolute;
@@ -174,4 +176,33 @@ body {
 .trasera .link-banco {
     font-size: 14px;
     color: var(--color-white);
+}
+
+
+/* ---------------------Boton ------------*/
+
+.contenedor-btn .btn-abrir-formulario {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    line-height: 20px;
+    background: var(--color-icon-form);
+    color: var(--color-white);
+    position: relative;
+    top: -25px;
+    z-index: 3;
+    border-radius: 100%;
+    box-shadow: 5px 4px 8px rgba(24, 56, 182, 0.4);
+    padding: 5px;
+    transition: all .2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.contenedor-btn .btn-abrir-formulario:hover {
+    background: var(--color-icon-form-hover);
+}
+
+.contenedor-btn .btn-abrir-formulario.active {
+    transform: rotate(45deg);
 }
