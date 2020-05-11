@@ -1,0 +1,99 @@
+:root {
+    --principal-color: #222432;
+    --color-white: #fff;
+    --color-label: #7d8994
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--principal-color);
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1000px;
+    padding: 40px 20px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* ---------Estilos Generales de las tarjetas------------ */
+
+.tarjeta {
+    width: 100%;
+    max-width: 550px;
+    position: relative;
+    color: var(--color-white);
+    transition: .3s ease all;
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.tarjeta.active {
+    transform: rotateY(180deg);
+}
+
+.tarjeta>div {
+    padding: 30px;
+    border-radius: 15px;
+    min-height: 315px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 10px 10px 0 rgba(90, 116, 148, 0.3);
+}
+
+.tarjeta .delantera {
+    width: 100%;
+    background: url(../img/tarjeta/horizon-stars-endless-space.jpeg);
+    background-size: cover;
+}
+
+.delantera .logo-marca {
+    text-align: right;
+    min-height: 50px;
+}
+
+.delantera .logo-marca img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-width: 80px;
+}
+
+.delantera .chip {
+    width: 100%;
+    max-width: 50px;
+    margin-bottom: 20px;
+}
+
+.delantera .grupo .label {
+    font-size: 16px;
+    color: var(--color-label);
+    margin-bottom: 5px;
+}
+
+.delantera .grupo .numero,
+.delantera .grupo .nombre,
+.delantera .grupo .expiracion {
+    color: var(--color-white);
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+.delantera .flexbox {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
