@@ -14,14 +14,13 @@
         <!-- Seccionde la tarjeta -->
         <section class="tarjeta" id="tarjeta">
             <div class="delantera">
-                <div class="logo-marca">
-                    <img src="img/logo/mastercard.png" alt="">
+                <div class="logo-marca" id="logo-marca">
                 </div>
                 <img src="img/chip-tarjeta.png" class="chip" alt="">
                 <div class="datos">
                     <div class="grupo" id="numero">
                         <p class="label">Número Tarjeta</p>
-                        <p class="numero">###############</p>
+                        <p class="numero">#### #### #### ####</p>
                     </div>
                     <div class="flexbox">
                         <div class="grupo" id="nombre">
@@ -41,7 +40,7 @@
                     <div class="grupo" id="firma">
                         <p class="label">Firma</p>
                         <div class="firma">
-                            <p>Alan Daniel</p>
+                            <p></p>
                         </div>
                     </div>
                     <div class="grupo" id="ccv">
@@ -61,7 +60,7 @@
             </button>
         </div>
         <!-- Formulario -->
-        <form action="" id="formulario-tarjeta" class="formulario-tarjeta active">
+        <form action="" id="formulario-tarjeta" class="formulario-tarjeta">
             <div class="grupo">
                 <input type="text" id="inputNumero" maxlength="19" autocomplete="off" placeholder="Número de Tarjeta">
             </div>
@@ -74,7 +73,7 @@
                     <div class="flexbox">
                         <div class="grupo-select">
                             <select name="mes" id="selectMes">
-                                <option disable selection>
+                                <option disabled selected>
                                     Mes
                                 </option>
                             </select>
@@ -82,7 +81,7 @@
                         </div>
                         <div class="grupo-select">
                             <select name="year" id="selectYear">
-                                <option disable selection>
+                                <option disabled selected>
                                     Año
                                 </option>
                             </select>
