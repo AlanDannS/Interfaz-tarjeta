@@ -8,6 +8,9 @@
     --img-tarjet: url(../img/tarjeta/horizon-stars-endless-space.jpeg);
     --gradient-firma: linear-gradient(to right, #2c3e50, #bdc3c7);
     --fuente-firma: 'Indie Flower', cursive;
+    --borde-form: #CED6E0;
+    --borde-form-hover: #93BDED;
+    --sombra: rgba(90, 116, 148, 0.3);
 }
 
 * {
@@ -56,7 +59,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-shadow: 0 10px 10px 0 rgba(90, 116, 148, 0.3);
+    box-shadow: 0 10px 10px 0 var(--sombra);
 }
 
 
@@ -205,4 +208,101 @@ body {
 
 .contenedor-btn .btn-abrir-formulario.active {
     transform: rotate(45deg);
+}
+
+
+/* Formulario de Tarjeta */
+
+.formulario-tarjeta {
+    background: var(--color-white);
+    width: 100%;
+    max-width: 700px;
+    padding: 150px 30px 30px 30px;
+    border-radius: 10px;
+    position: relative;
+    top: -150px;
+    z-index: 1;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: clip-path .3s ease-out;
+}
+
+.formulario-tarjeta.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.formulario-tarjeta input,
+.formulario-tarjeta select,
+.btn-enviar {
+    border: 2px solid var(--borde-form);
+    font-size: 18px;
+    height: 35px;
+    width: 100%;
+    padding: 5px 12px;
+    margin: 5px 0;
+    transition: .3s ease all;
+}
+
+.formulario-tarjeta input:hover,
+.formulario-tarjeta select:hover {
+    border: 2px solid --borde-form-hover;
+}
+
+.formulario-tarjeta input:focus,
+.formulario-tarjeta select:focus {
+    outline: rgb(4, 4, 4);
+    box-shadow: 1px 7px 10px -5px var(--sombra);
+}
+
+.formulario-tarjeta input {
+    text-transform: uppercase;
+}
+
+.formulario-tarjeta .flexbox {
+    display: flex;
+    justify-content: space-between;
+}
+
+.formulario-tarjeta .expira {
+    width: 100%;
+}
+
+.formulario-tarjeta .ccv {
+    min-width: 100px;
+}
+
+.formulario-tarjeta .grupo-select {
+    width: 100%;
+    margin-right: 15px;
+    position: relative;
+}
+
+.formulario-tarjeta select {
+    -webkit-appearance: none;
+}
+
+.formulario-tarjeta .grupo-select i {
+    position: absolute;
+    color: var(--borde-form);
+    top: 18px;
+    right: 15px;
+    transition: .3s ease all;
+}
+
+.formulario-tarjeta .grupo-select:hover i {
+    color: var(--color-label);
+}
+
+.formulario-tarjeta .btn-enviar {
+    height: 50px;
+    border: none;
+    padding: 10px;
+    font-size: 22px;
+    color: var(--color-white);
+    background: var(--color-icon-form);
+    box-shadow: 2px 2px 10px 0 rgba(0, 85, 212, 0.4);
+    cursor: pointer;
+}
+
+.formulario-tarjeta .btn-enviar:hover {
+    background: var(--color-icon-form-hover);
 }

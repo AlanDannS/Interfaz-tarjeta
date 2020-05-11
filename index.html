@@ -60,6 +60,42 @@
                 <i class="fas fa-plus"></i>
             </button>
         </div>
+        <!-- Formulario -->
+        <form action="" id="formulario-tarjeta" class="formulario-tarjeta active">
+            <div class="grupo">
+                <input type="text" id="inputNumero" maxlength="19" autocomplete="off" placeholder="Número de Tarjeta">
+            </div>
+            <div class="grupo">
+                <input type="text" id="inputNombre" maxlength="19" autocomplete="off" placeholder="Nombre">
+            </div>
+
+            <div class="flexbox">
+                <div class="grupo expira">
+                    <div class="flexbox">
+                        <div class="grupo-select">
+                            <select name="mes" id="selectMes">
+                                <option disable selection>
+                                    Mes
+                                </option>
+                            </select>
+                            <i class="fas fa-angle-down"></i>
+                        </div>
+                        <div class="grupo-select">
+                            <select name="year" id="selectYear">
+                                <option disable selection>
+                                    Año
+                                </option>
+                            </select>
+                            <i class="fas fa-angle-down"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="grupo cvv">
+                    <input type="text" id="inputCVV" maxlength="3" placeholder="CVV">
+                </div>
+            </div>
+            <button type="submit" class="btn-enviar">Enviar</button>
+        </form>
 
     </div>
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
