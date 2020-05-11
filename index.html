@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tarjeta Debito/Credito</title>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <div class="contenedor">
-        <section class="tarjeta" id="tarjeta">
+        <section class="tarjeta active" id="tarjeta">
             <div class="delantera">
                 <div class="logo-marca">
                     <img src="img/logo/mastercard.png" alt="">
@@ -34,6 +35,21 @@
                 </div>
             </div>
             <div class="trasera">
+                <div class="barra-magnetica"></div>
+                <div class="datos">
+                    <div class="grupo" id="firma">
+                        <p class="label">Firma</p>
+                        <div class="firma">
+                            <p>Alan Daniel</p>
+                        </div>
+                    </div>
+                    <div class="grupo" id="ccv">
+                        <p class="label">CCV</p>
+                        <p class="ccv"></p>
+                    </div>
+                </div>
+                <p class="leyenda">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident, debitis!</p>
+                <a href="#" class="link-bank">www.tubanco.com</a>
 
             </div>
         </section>

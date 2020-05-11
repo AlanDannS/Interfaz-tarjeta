@@ -1,7 +1,11 @@
 :root {
     --principal-color: #222432;
     --color-white: #fff;
-    --color-label: #7d8994
+    --color-black: #000;
+    --color-label: #7d8994;
+    --img-tarjet: url(../img/tarjeta/horizon-stars-endless-space.jpeg);
+    --gradient-firma: linear-gradient(to right, #2c3e50, #bdc3c7);
+    --fuente-firma: 'Indie Flower', cursive;
 }
 
 * {
@@ -54,9 +58,12 @@ body {
     box-shadow: 0 10px 10px 0 rgba(90, 116, 148, 0.3);
 }
 
+
+/* Tar Delantera */
+
 .tarjeta .delantera {
     width: 100%;
-    background: url(../img/tarjeta/horizon-stars-endless-space.jpeg);
+    background: var(--img-tarjet);
     background-size: cover;
 }
 
@@ -96,4 +103,75 @@ body {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
+}
+
+
+/* Tar Tracera */
+
+.trasera {
+    background: var(--img-tarjet);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+.trasera .barra-magnetica {
+    height: 40px;
+    width: 100%;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    background: var(--color-black);
+}
+
+.trasera .datos {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.trasera .datos p {
+    margin-bottom: 5px;
+}
+
+.trasera .datos #firma {
+    width: 70%;
+}
+
+.trasera .datos #firma .firma {
+    height: 40px;
+    background: var(--gradient-firma);
+}
+
+.trasera .datos #firma .firma p {
+    line-height: 40px;
+    font-family: var(--fuente-firma);
+    font-size: 30px;
+    color: var(--color-black);
+    padding: 0 10px;
+    text-transform: capitalize;
+}
+
+.trasera .datos #ccv {
+    width: 20%;
+}
+
+.trasera .datos #ccv .ccv {
+    background: var(--color-white);
+    height: 40px;
+    color: var(--color-black);
+    padding: 10px;
+    text-align: center;
+}
+
+.trasera .leyenda {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.trasera .link-banco {
+    font-size: 14px;
+    color: var(--color-white);
 }
