@@ -68,12 +68,12 @@ formulario.inputNumero.addEventListener('keyup', (e) => {
     if (valorInput[0] == 4) {
         logoMarca.innerHTML = ''
         const imagen = document.createElement('img')
-        imagen.src = '../img/logo/visa.png'
+        imagen.src = 'https://raw.githubusercontent.com/AlanDannS/Interfaz-tarjeta/master/img/logo/visa.png'
         logoMarca.appendChild(imagen)
     } else if (valorInput[0] == 5) {
         logoMarca.innerHTML = ''
         const imagen = document.createElement('img')
-        imagen.src = '../img/logo/mastercard.png'
+        imagen.src = 'https://raw.githubusercontent.com/AlanDannS/Interfaz-tarjeta/master/img/logo/mastercard.png'
         logoMarca.appendChild(imagen)
     }
 
