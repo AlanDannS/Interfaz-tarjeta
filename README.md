@@ -1,4 +1,4 @@
-# API Rick & Morty
+# Interfaz tarjeta
 ![Image text](https://raw.githubusercontent.com/AlanDannS/Interfaz-tarjeta/master/principal.png)
 
 
